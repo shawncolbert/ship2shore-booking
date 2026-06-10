@@ -6,524 +6,122 @@
   <title>Ship2Shore Booking – Delivery Order Form</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap');
-
     :root {
-      --navy:   #0a1628;
-      --steel:  #1a2e4a;
-      --anchor: #1e4d8c;
-      --wave:   #2a7abf;
-      --gold:   #e8a020;
-      --light:  #f0f4f8;
-      --white:  #ffffff;
-      --border: #2a3f5a;
-      --text:   #c8d8e8;
-      --muted:  #7a98b8;
-      --error:  #e05555;
-      --success:#2ecc71;
+      --navy:#0a1628; --steel:#1a2e4a; --anchor:#1e4d8c; --wave:#2a7abf;
+      --gold:#e8a020; --white:#ffffff; --border:#2a3f5a; --text:#c8d8e8;
+      --muted:#7a98b8; --error:#e05555; --success:#2ecc71;
     }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: var(--navy);
-      color: var(--text);
-      font-family: 'Barlow', sans-serif;
-      font-size: 16px;
-      line-height: 1.5;
-      min-height: 100vh;
-    }
-
-    /* HEADER */
-    header {
-      background: var(--steel);
-      border-bottom: 3px solid var(--gold);
-      padding: 20px 24px;
-      text-align: center;
-    }
-
-    .logo-line {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .logo-line span {
-      color: var(--gold);
-    }
-
-    .tagline {
-      font-size: 12px;
-      color: var(--muted);
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-top: 4px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: var(--anchor);
-      color: var(--white);
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-top: 10px;
-    }
-
-    /* MAIN */
-    main {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 24px 16px 60px;
-    }
-
-    .form-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--white);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 6px;
-    }
-
-    .form-subtitle {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 28px;
-    }
-
-    /* SECTION BLOCKS */
-    .section {
-      background: var(--steel);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-
-    .section-label {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 16px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    /* FORM ELEMENTS */
-    .field {
-      margin-bottom: 16px;
-    }
-
-    .field:last-child {
-      margin-bottom: 0;
-    }
-
-    label {
-      display: block;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 6px;
-    }
-
-    label .req {
-      color: var(--gold);
-      margin-left: 2px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="date"],
-    input[type="time"],
-    select,
-    textarea {
-      width: 100%;
-      background: var(--navy);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      color: var(--white);
-      font-family: 'Barlow', sans-serif;
-      font-size: 15px;
-      padding: 12px 14px;
-      transition: border-color 0.2s;
-      -webkit-appearance: none;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      outline: none;
-      border-color: var(--wave);
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      color: var(--border);
-    }
-
-    select option {
-      background: var(--navy);
-      color: var(--white);
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 90px;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    @media (max-width: 480px) {
-      .two-col { grid-template-columns: 1fr; }
-    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--navy);color:var(--text);font-family:'Barlow',sans-serif;font-size:16px;line-height:1.5;min-height:100vh;}
+    header{background:var(--steel);border-bottom:3px solid var(--gold);padding:20px 24px;text-align:center;}
+    .logo-line{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:700;color:var(--white);letter-spacing:2px;text-transform:uppercase;}
+    .logo-line span{color:var(--gold);}
+    .tagline{font-size:12px;color:var(--muted);letter-spacing:3px;text-transform:uppercase;margin-top:4px;}
+    .badge{display:inline-block;background:var(--anchor);color:var(--white);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-top:10px;}
+    main{max-width:680px;margin:0 auto;padding:24px 16px 60px;}
+    .form-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
+    .form-subtitle{font-size:13px;color:var(--muted);margin-bottom:28px;}
+    .section{background:var(--steel);border:1px solid var(--border);border-radius:10px;padding:20px;margin-bottom:20px;}
+    .section-label{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+    .field{margin-bottom:16px;}
+    .field:last-child{margin-bottom:0;}
+    label{display:block;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
+    label .req{color:var(--gold);margin-left:2px;}
+    input[type="text"],input[type="email"],input[type="tel"],select,textarea{width:100%;background:var(--navy);border:1px solid var(--border);border-radius:6px;color:var(--white);font-family:'Barlow',sans-serif;font-size:15px;padding:12px 14px;transition:border-color 0.2s;-webkit-appearance:none;appearance:none;}
+    input:focus,select:focus,textarea:focus{outline:none;border-color:var(--wave);}
+    input::placeholder,textarea::placeholder{color:var(--border);}
+    select option{background:var(--navy);color:var(--white);}
+    textarea{resize:vertical;min-height:90px;}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+    @media(max-width:480px){.two-col{grid-template-columns:1fr;}}
 
     /* SERVICE CARDS */
-    .service-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-    }
+    .service-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+    .service-card{position:relative;}
+    .service-card input[type="radio"]{position:absolute;opacity:0;width:0;height:0;}
+    .service-card label{display:flex;align-items:center;justify-content:space-between;background:var(--navy);border:2px solid var(--border);border-radius:8px;padding:14px 16px;cursor:pointer;transition:border-color 0.2s,background 0.2s;text-transform:none;letter-spacing:0;font-size:15px;color:var(--text);font-weight:500;}
+    .service-card input[type="radio"]:checked+label{border-color:var(--gold);background:rgba(232,160,32,0.08);}
+    .service-card label:hover{border-color:var(--wave);}
+    .service-name{font-weight:600;color:var(--white);}
+    .service-desc{font-size:12px;color:var(--muted);margin-top:2px;}
+    .service-price{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;color:var(--gold);white-space:nowrap;margin-left:12px;}
 
-    .service-card {
-      position: relative;
-    }
+    /* PORT CARDS */
+    .port-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
+    @media(max-width:420px){.port-grid{grid-template-columns:1fr;}}
+    .port-card{position:relative;}
+    .port-card input[type="radio"]{position:absolute;opacity:0;width:0;height:0;}
+    .port-card label{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--navy);border:2px solid var(--border);border-radius:8px;padding:14px 10px;cursor:pointer;font-size:13px;font-weight:600;color:var(--text);text-align:center;transition:border-color 0.2s;text-transform:none;letter-spacing:0;line-height:1.3;}
+    .port-card input[type="radio"]:checked+label{border-color:var(--wave);color:var(--white);background:rgba(42,122,191,0.12);}
+    .port-icon{font-size:22px;margin-bottom:6px;}
 
-    .service-card input[type="radio"] {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
+    /* VEHICLE */
+    .vehicle-block{border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:14px;background:rgba(10,22,40,0.5);}
+    .vehicle-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+    .vehicle-num{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--wave);text-transform:uppercase;letter-spacing:2px;}
+    .remove-vehicle-btn{background:transparent;border:1px solid var(--error);color:var(--error);font-size:12px;font-weight:600;padding:4px 10px;border-radius:4px;cursor:pointer;font-family:'Barlow',sans-serif;}
+    .remove-vehicle-btn:hover{background:rgba(224,85,85,0.1);}
+    .add-vehicle-btn{width:100%;background:transparent;border:2px dashed var(--wave);color:var(--wave);font-family:'Barlow',sans-serif;font-size:15px;font-weight:600;padding:12px;border-radius:8px;cursor:pointer;margin-top:4px;transition:background 0.2s;}
+    .add-vehicle-btn:hover{background:rgba(42,122,191,0.1);}
+    .vehicle-note{text-align:center;font-size:12px;color:var(--muted);margin-top:8px;}
 
-    .service-card label {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--navy);
-      border: 2px solid var(--border);
-      border-radius: 8px;
-      padding: 14px 16px;
-      cursor: pointer;
-      transition: border-color 0.2s, background 0.2s;
-      text-transform: none;
-      letter-spacing: 0;
-      font-size: 15px;
-      color: var(--text);
-      font-weight: 500;
-    }
+    /* CALENDAR */
+    .date-wrap{position:relative;}
+    .date-wrap input{cursor:pointer;padding-right:40px;}
+    .date-icon{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:18px;pointer-events:none;}
+    .cal-dropdown{display:none;position:absolute;z-index:999;background:var(--steel);border:1px solid var(--wave);border-radius:10px;padding:12px;width:280px;box-shadow:0 8px 24px rgba(0,0,0,0.5);margin-top:4px;}
+    .cal-dropdown.open{display:block;}
+    .cal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+    .cal-nav{background:none;border:none;color:var(--wave);font-size:20px;cursor:pointer;padding:4px 8px;border-radius:4px;line-height:1;}
+    .cal-nav:hover{background:rgba(42,122,191,0.2);}
+    .cal-month-year{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;color:var(--white);letter-spacing:1px;}
+    .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;}
+    .cal-day-name{text-align:center;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;padding:4px 0;}
+    .cal-day{text-align:center;padding:6px 2px;border-radius:6px;cursor:pointer;font-size:13px;color:var(--text);transition:background 0.15s;}
+    .cal-day:hover:not(.past):not(.empty){background:rgba(42,122,191,0.3);color:var(--white);}
+    .cal-day.today{border:1px solid var(--wave);color:var(--wave);font-weight:700;}
+    .cal-day.selected{background:var(--gold);color:var(--navy);font-weight:700;}
+    .cal-day.past{color:var(--border);cursor:not-allowed;}
+    .cal-day.empty{cursor:default;}
 
-    .service-card input[type="radio"]:checked + label {
-      border-color: var(--gold);
-      background: rgba(232, 160, 32, 0.08);
-    }
+    /* PAYMENT */
+    .payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .pay-card{position:relative;}
+    .pay-card input[type="radio"]{position:absolute;opacity:0;width:0;height:0;}
+    .pay-card label{display:flex;align-items:center;justify-content:center;background:var(--navy);border:2px solid var(--border);border-radius:8px;padding:14px;cursor:pointer;font-size:15px;font-weight:600;color:var(--text);text-align:center;transition:border-color 0.2s;text-transform:none;letter-spacing:0;gap:8px;}
+    .pay-card input[type="radio"]:checked+label{border-color:var(--gold);color:var(--gold);}
+    .pay-card label:hover{border-color:var(--wave);}
+    .pay-info-box{display:none;background:rgba(42,122,191,0.08);border:1px solid var(--wave);border-radius:8px;padding:16px;margin-top:14px;}
+    .pay-info-box.active{display:block;}
+    .pay-info-title{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;color:var(--wave);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
+    .pay-info-row{font-size:15px;color:var(--text);margin-bottom:6px;}
+    .pay-info-row strong{color:var(--gold);font-size:17px;}
+    .pay-info-note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.6;padding-top:8px;border-top:1px solid var(--border);}
+    .pay-action-btn{display:block;width:100%;margin-top:12px;background:var(--gold);color:var(--navy);font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border:none;border-radius:6px;padding:12px;text-align:center;text-decoration:none;cursor:pointer;}
+    .pay-action-btn:hover{background:#f0b030;}
+    .pay-reminder{margin-top:14px;font-size:12px;color:var(--muted);background:rgba(232,160,32,0.06);border:1px solid rgba(232,160,32,0.2);border-radius:6px;padding:10px 12px;}
 
-    .service-card label:hover {
-      border-color: var(--wave);
-    }
-
-    .service-name {
-      font-weight: 600;
-      color: var(--white);
-    }
-
-    .service-desc {
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 2px;
-    }
-
-    .service-price {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--gold);
-      white-space: nowrap;
-      margin-left: 12px;
-    }
-
-    /* PAYMENT CARDS */
-    .payment-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-
-    .pay-card {
-      position: relative;
-    }
-
-    .pay-card input[type="radio"] {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    .pay-card label {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--navy);
-      border: 2px solid var(--border);
-      border-radius: 8px;
-      padding: 14px;
-      cursor: pointer;
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text);
-      text-align: center;
-      transition: border-color 0.2s;
-      text-transform: none;
-      letter-spacing: 0;
-    }
-
-    .pay-card input[type="radio"]:checked + label {
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-
-    .pay-card label:hover {
-      border-color: var(--wave);
-    }
-
-    /* PORT SELECTOR */
-    .port-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 10px;
-    }
-
-    @media (max-width: 420px) {
-      .port-grid { grid-template-columns: 1fr; }
-      .payment-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    .port-card {
-      position: relative;
-    }
-
-    .port-card input[type="radio"] {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    .port-card label {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: var(--navy);
-      border: 2px solid var(--border);
-      border-radius: 8px;
-      padding: 14px 10px;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text);
-      text-align: center;
-      transition: border-color 0.2s;
-      text-transform: none;
-      letter-spacing: 0;
-      line-height: 1.3;
-    }
-
-    .port-card input[type="radio"]:checked + label {
-      border-color: var(--wave);
-      color: var(--white);
-      background: rgba(42, 122, 191, 0.12);
-    }
-
-    .port-icon {
-      font-size: 22px;
-      margin-bottom: 6px;
-    }
-
-    /* AUTHORIZATION */
-    .auth-box {
-      background: rgba(232,160,32,0.06);
-      border: 1px solid rgba(232,160,32,0.3);
-      border-radius: 8px;
-      padding: 16px;
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 16px;
-    }
-
-    .auth-box strong {
-      color: var(--white);
-    }
-
-    .checkbox-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      cursor: pointer;
-    }
-
-    .checkbox-row input[type="checkbox"] {
-      width: 20px;
-      height: 20px;
-      min-width: 20px;
-      accent-color: var(--gold);
-      margin-top: 2px;
-      cursor: pointer;
-    }
-
-    .checkbox-row span {
-      font-size: 14px;
-      color: var(--text);
-    }
-
-    /* MULTI-VEHICLE */
-    .vehicle-block {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 16px;
-      margin-bottom: 14px;
-      background: rgba(10,22,40,0.5);
-    }
-    .vehicle-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 14px;
-    }
-    .vehicle-num {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--wave);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    .remove-vehicle-btn {
-      background: transparent;
-      border: 1px solid var(--error);
-      color: var(--error);
-      font-size: 12px;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-family: 'Barlow', sans-serif;
-    }
-    .remove-vehicle-btn:hover { background: rgba(224,85,85,0.1); }
-    .add-vehicle-btn {
-      width: 100%;
-      background: transparent;
-      border: 2px dashed var(--wave);
-      color: var(--wave);
-      font-family: 'Barlow', sans-serif;
-      font-size: 15px;
-      font-weight: 600;
-      padding: 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 4px;
-      transition: background 0.2s;
-    }
-    .add-vehicle-btn:hover { background: rgba(42,122,191,0.1); }
-    .vehicle-note {
-      text-align: center;
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 8px;
-    }
+    /* AUTH */
+    .auth-box{background:rgba(232,160,32,0.06);border:1px solid rgba(232,160,32,0.3);border-radius:8px;padding:16px;font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px;}
+    .auth-box strong{color:var(--white);}
+    .checkbox-row{display:flex;align-items:flex-start;gap:12px;cursor:pointer;}
+    .checkbox-row input[type="checkbox"]{width:20px;height:20px;min-width:20px;accent-color:var(--gold);margin-top:2px;cursor:pointer;}
+    .checkbox-row span{font-size:14px;color:var(--text);}
 
     /* SUBMIT */
-    .submit-btn {
-      width: 100%;
-      background: var(--gold);
-      color: var(--navy);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      border: none;
-      border-radius: 8px;
-      padding: 18px;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.1s;
-      margin-top: 8px;
-    }
-
-    .submit-btn:hover {
-      background: #f0b030;
-    }
-
-    .submit-btn:active {
-      transform: scale(0.99);
-    }
-
-    .submit-note {
-      text-align: center;
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 12px;
-    }
+    .submit-btn{width:100%;background:var(--gold);color:var(--navy);font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:none;border-radius:8px;padding:18px;cursor:pointer;transition:background 0.2s,transform 0.1s;margin-top:8px;}
+    .submit-btn:hover{background:#f0b030;}
+    .submit-btn:active{transform:scale(0.99);}
+    .submit-note{text-align:center;font-size:12px;color:var(--muted);margin-top:12px;}
 
     /* SUCCESS */
-    #success-msg {
-      display: none;
-      background: var(--steel);
-      border: 2px solid var(--success);
-      border-radius: 10px;
-      padding: 40px 24px;
-      text-align: center;
-      margin-top: 20px;
-    }
+    #success-msg{display:none;background:var(--steel);border:2px solid var(--success);border-radius:10px;padding:40px 24px;text-align:center;margin-top:20px;}
+    #success-msg .check{font-size:48px;margin-bottom:16px;}
+    #success-msg h2{font-family:'Barlow Condensed',sans-serif;font-size:26px;color:var(--white);margin-bottom:10px;}
+    #success-msg p{color:var(--muted);font-size:15px;}
 
-    #success-msg .check {
-      font-size: 48px;
-      margin-bottom: 16px;
-    }
-
-    #success-msg h2 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 26px;
-      color: var(--white);
-      margin-bottom: 10px;
-    }
-
-    #success-msg p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 12px;
-      color: var(--border);
-      border-top: 1px solid var(--border);
-    }
-
-    footer a {
-      color: var(--muted);
-      text-decoration: none;
-    }
+    footer{text-align:center;padding:20px;font-size:12px;color:var(--border);border-top:1px solid var(--border);}
+    footer a{color:var(--muted);text-decoration:none;}
   </style>
 </head>
 <body>
@@ -538,14 +136,13 @@
   <div class="form-title">New Delivery Order</div>
   <div class="form-subtitle">Fill out all fields below. We'll confirm your order by phone or text within 30 minutes.</div>
 
-  <form name="delivery-order" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="deliveryForm">
+  <form name="delivery-order" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="deliveryForm" action="/?success=true">
     <input type="hidden" name="form-name" value="delivery-order" />
-    <input type="hidden" name="bot-field" style="display:none" />
+    <p style="display:none"><input name="bot-field" /></p>
 
     <!-- CUSTOMER INFO -->
     <div class="section">
       <div class="section-label">👤 Customer Information</div>
-
       <div class="two-col">
         <div class="field">
           <label>First Name <span class="req">*</span></label>
@@ -556,7 +153,6 @@
           <input type="text" name="last_name" placeholder="Last name" required />
         </div>
       </div>
-
       <div class="two-col">
         <div class="field">
           <label>Phone Number <span class="req">*</span></label>
@@ -564,10 +160,9 @@
         </div>
         <div class="field">
           <label>Email Address</label>
-          <input type="email" name="email" placeholder="your@email.com" />
+          <input type="text" name="email" placeholder="your@email.com" />
         </div>
       </div>
-
       <div class="field">
         <label>Company / Unit (if applicable)</label>
         <input type="text" name="company" placeholder="Company name or military unit" />
@@ -580,24 +175,15 @@
       <div class="port-grid">
         <div class="port-card">
           <input type="radio" name="port_location" id="port_lb" value="Port of Long Beach" required />
-          <label for="port_lb">
-            <span class="port-icon">🚢</span>
-            Port of Long Beach
-          </label>
+          <label for="port_lb"><span class="port-icon">🚢</span>Port of Long Beach</label>
         </div>
         <div class="port-card">
           <input type="radio" name="port_location" id="port_wil" value="Port of Wilmington" />
-          <label for="port_wil">
-            <span class="port-icon">⚓</span>
-            Port of Wilmington
-          </label>
+          <label for="port_wil"><span class="port-icon">⚓</span>Port of Wilmington</label>
         </div>
         <div class="port-card">
           <input type="radio" name="port_location" id="port_mat" value="Port of Matson" />
-          <label for="port_mat">
-            <span class="port-icon">🏗️</span>
-            Port of Matson
-          </label>
+          <label for="port_mat"><span class="port-icon">🏗️</span>Port of Matson</label>
         </div>
       </div>
     </div>
@@ -609,30 +195,21 @@
         <div class="service-card">
           <input type="radio" name="service_type" id="svc_twic" value="TWIC Vehicle Escort – $85" required />
           <label for="svc_twic">
-            <div>
-              <div class="service-name">TWIC Vehicle Escort</div>
-              <div class="service-desc">Escort for vehicles without TWIC access</div>
-            </div>
+            <div><div class="service-name">TWIC Vehicle Escort</div><div class="service-desc">Escort for vehicles without TWIC access</div></div>
             <div class="service-price">$85</div>
           </label>
         </div>
         <div class="service-card">
           <input type="radio" name="service_type" id="svc_hot" value="Hotshot – $200" />
           <label for="svc_hot">
-            <div>
-              <div class="service-name">Hotshot</div>
-              <div class="service-desc">Priority vehicle pickup &amp; delivery</div>
-            </div>
+            <div><div class="service-name">Hotshot</div><div class="service-desc">Priority vehicle pickup &amp; delivery</div></div>
             <div class="service-price">$200</div>
           </label>
         </div>
         <div class="service-card">
           <input type="radio" name="service_type" id="svc_semi" value="Semi Load/Unload & Container – $325" />
           <label for="svc_semi">
-            <div>
-              <div class="service-name">Semi Load/Unload &amp; Container</div>
-              <div class="service-desc">Full semi truck or container service</div>
-            </div>
+            <div><div class="service-name">Semi Load/Unload &amp; Container</div><div class="service-desc">Full semi truck or container service</div></div>
             <div class="service-price">$325</div>
           </label>
         </div>
@@ -642,50 +219,24 @@
     <!-- VEHICLE INFO -->
     <div class="section">
       <div class="section-label">🚗 Vehicle Information</div>
-
       <div id="vehicles-container">
-        <!-- Vehicle 1 (default) -->
         <div class="vehicle-block" id="vehicle-1">
-          <div class="vehicle-header">
-            <span class="vehicle-num">Vehicle 1</span>
+          <div class="vehicle-header"><span class="vehicle-num">Vehicle 1</span></div>
+          <div class="two-col">
+            <div class="field"><label>Year <span class="req">*</span></label><input type="text" name="vehicle_1_year" placeholder="e.g. 2022" required /></div>
+            <div class="field"><label>Make <span class="req">*</span></label><input type="text" name="vehicle_1_make" placeholder="e.g. Toyota" required /></div>
           </div>
           <div class="two-col">
-            <div class="field">
-              <label>Year <span class="req">*</span></label>
-              <input type="text" name="vehicle_1_year" placeholder="e.g. 2022" required />
-            </div>
-            <div class="field">
-              <label>Make <span class="req">*</span></label>
-              <input type="text" name="vehicle_1_make" placeholder="e.g. Toyota" required />
-            </div>
+            <div class="field"><label>Model <span class="req">*</span></label><input type="text" name="vehicle_1_model" placeholder="e.g. Tacoma" required /></div>
+            <div class="field"><label>Color</label><input type="text" name="vehicle_1_color" placeholder="e.g. White" /></div>
           </div>
           <div class="two-col">
-            <div class="field">
-              <label>Model <span class="req">*</span></label>
-              <input type="text" name="vehicle_1_model" placeholder="e.g. Tacoma" required />
-            </div>
-            <div class="field">
-              <label>Color</label>
-              <input type="text" name="vehicle_1_color" placeholder="e.g. White" />
-            </div>
+            <div class="field"><label>License Plate <span class="req">*</span></label><input type="text" name="vehicle_1_plate" placeholder="e.g. 7ABC123" required /></div>
+            <div class="field"><label>State</label><input type="text" name="vehicle_1_state" placeholder="e.g. CA" /></div>
           </div>
-          <div class="two-col">
-            <div class="field">
-              <label>License Plate <span class="req">*</span></label>
-              <input type="text" name="vehicle_1_plate" placeholder="e.g. 7ABC123" required />
-            </div>
-            <div class="field">
-              <label>State</label>
-              <input type="text" name="vehicle_1_state" placeholder="e.g. CA" />
-            </div>
-          </div>
-          <div class="field">
-            <label>VIN (optional)</label>
-            <input type="text" name="vehicle_1_vin" placeholder="Vehicle Identification Number" />
-          </div>
+          <div class="field"><label>VIN (optional)</label><input type="text" name="vehicle_1_vin" placeholder="Vehicle Identification Number" /></div>
         </div>
       </div>
-
       <button type="button" class="add-vehicle-btn" onclick="addVehicle()">＋ Add Another Vehicle</button>
       <div class="vehicle-note">Each additional vehicle will be added to the same order.</div>
     </div>
@@ -696,11 +247,41 @@
       <div class="two-col">
         <div class="field">
           <label>Pickup Date <span class="req">*</span></label>
-          <input type="date" name="pickup_date" required />
+          <div class="date-wrap">
+            <input type="text" name="pickup_date" id="pickup_date" placeholder="Tap to select date" required autocomplete="off" readonly />
+            <span class="date-icon">📅</span>
+          </div>
+          <div class="cal-dropdown" id="cal-dropdown"></div>
         </div>
         <div class="field">
           <label>Pickup Time <span class="req">*</span></label>
-          <input type="time" name="pickup_time" required />
+          <select name="pickup_time" required>
+            <option value="">— Select time —</option>
+            <option>12:00 AM</option><option>12:30 AM</option>
+            <option>1:00 AM</option><option>1:30 AM</option>
+            <option>2:00 AM</option><option>2:30 AM</option>
+            <option>3:00 AM</option><option>3:30 AM</option>
+            <option>4:00 AM</option><option>4:30 AM</option>
+            <option>5:00 AM</option><option>5:30 AM</option>
+            <option>6:00 AM</option><option>6:30 AM</option>
+            <option>7:00 AM</option><option>7:30 AM</option>
+            <option>8:00 AM</option><option>8:30 AM</option>
+            <option>9:00 AM</option><option>9:30 AM</option>
+            <option>10:00 AM</option><option>10:30 AM</option>
+            <option>11:00 AM</option><option>11:30 AM</option>
+            <option>12:00 PM</option><option>12:30 PM</option>
+            <option>1:00 PM</option><option>1:30 PM</option>
+            <option>2:00 PM</option><option>2:30 PM</option>
+            <option>3:00 PM</option><option>3:30 PM</option>
+            <option>4:00 PM</option><option>4:30 PM</option>
+            <option>5:00 PM</option><option>5:30 PM</option>
+            <option>6:00 PM</option><option>6:30 PM</option>
+            <option>7:00 PM</option><option>7:30 PM</option>
+            <option>8:00 PM</option><option>8:30 PM</option>
+            <option>9:00 PM</option><option>9:30 PM</option>
+            <option>10:00 PM</option><option>10:30 PM</option>
+            <option>11:00 PM</option><option>11:30 PM</option>
+          </select>
         </div>
       </div>
       <div class="field">
@@ -714,22 +295,50 @@
       <div class="section-label">💳 Payment Method <span class="req">*</span></div>
       <div class="payment-grid">
         <div class="pay-card">
-          <input type="radio" name="payment_method" id="pay_zelle" value="Zelle" required />
-          <label for="pay_zelle">Zelle</label>
+          <input type="radio" name="payment_method" id="pay_zelle" value="Zelle" required onchange="showPay('zelle')" />
+          <label for="pay_zelle">💚 Zelle</label>
         </div>
         <div class="pay-card">
-          <input type="radio" name="payment_method" id="pay_cashapp" value="Cash App" />
-          <label for="pay_cashapp">Cash App</label>
+          <input type="radio" name="payment_method" id="pay_cashapp" value="Cash App" onchange="showPay('cashapp')" />
+          <label for="pay_cashapp">💵 Cash App</label>
         </div>
         <div class="pay-card">
-          <input type="radio" name="payment_method" id="pay_venmo" value="Venmo" />
-          <label for="pay_venmo">Venmo</label>
+          <input type="radio" name="payment_method" id="pay_venmo" value="Venmo" onchange="showPay('venmo')" />
+          <label for="pay_venmo">🔵 Venmo</label>
         </div>
         <div class="pay-card">
-          <input type="radio" name="payment_method" id="pay_apple" value="Apple Pay" />
-          <label for="pay_apple">Apple Pay</label>
+          <input type="radio" name="payment_method" id="pay_apple" value="Apple Pay" onchange="showPay('apple')" />
+          <label for="pay_apple">🍎 Apple Pay</label>
         </div>
       </div>
+
+      <div id="pay-zelle" class="pay-info-box">
+        <div class="pay-info-title">Send via Zelle</div>
+        <div class="pay-info-row">📱 Send to: <strong>(310) 748-0040</strong></div>
+        <div class="pay-info-note">Open your bank app → Zelle → Send to (310) 748-0040 · Include your name &amp; port in the memo.</div>
+      </div>
+
+      <div id="pay-cashapp" class="pay-info-box">
+        <div class="pay-info-title">Send via Cash App</div>
+        <div class="pay-info-row">$Cashtag: <strong>$shawncolbert</strong></div>
+        <a id="cashapp-link" href="https://cash.app/$shawncolbert" target="_blank" class="pay-action-btn">Open Cash App → $shawncolbert</a>
+        <div class="pay-info-note">Tap the button above to open Cash App. Enter the service amount and include your name &amp; port in the note.</div>
+      </div>
+
+      <div id="pay-venmo" class="pay-info-box">
+        <div class="pay-info-title">Send via Venmo</div>
+        <div class="pay-info-row">@Username: <strong>@twicservices</strong></div>
+        <a id="venmo-link" href="https://venmo.com/twicservices" target="_blank" class="pay-action-btn">Open Venmo → @twicservices</a>
+        <div class="pay-info-note">Tap the button above to open Venmo. Enter the service amount and include your name &amp; port in the note.</div>
+      </div>
+
+      <div id="pay-apple" class="pay-info-box">
+        <div class="pay-info-title">Send via Apple Pay</div>
+        <div class="pay-info-row">📱 Phone: <strong>(310) 748-0040</strong></div>
+        <div class="pay-info-note">Open iMessage → text (310) 748-0040 → tap the <strong>$</strong> button → enter amount → Apple Pay. Include your name &amp; port in the message.</div>
+      </div>
+
+      <div class="pay-reminder">⚠️ Payment is due at time of service. Always include your name and port location in the payment note.</div>
     </div>
 
     <!-- SPECIAL INSTRUCTIONS -->
@@ -757,14 +366,13 @@
     <div class="section">
       <div class="section-label">✍️ Authorization</div>
       <div class="auth-box">
-        By submitting this form, <strong>I authorize Ship2Shore Booking</strong> to perform the requested delivery/escort service on my behalf. I confirm that all vehicle information provided is accurate. I understand that payment is due at time of service and that rates are as listed above.
-        <br/><br/>
-        <strong>Contact:</strong> (310) 748-0040 · shawn@ship2shorebooking.com
+        By submitting this form, <strong>I authorize Ship2Shore Booking</strong> to perform the requested delivery/escort service on my behalf. I confirm all vehicle information is accurate. Payment is due at time of service.<br/><br/>
+        <strong>Questions?</strong> Call or text (310) 748-0040 · shawn@ship2shorebooking.com
       </div>
       <div class="field">
         <label class="checkbox-row">
           <input type="checkbox" name="authorization" value="Authorized" required />
-          <span>I agree to the terms above and authorize Ship2Shore Booking to proceed with my order. <span class="req">*</span></span>
+          <span>I agree to the terms above and authorize Ship2Shore Booking to proceed. <span class="req">*</span></span>
         </label>
       </div>
       <div class="field">
@@ -773,14 +381,17 @@
       </div>
     </div>
 
-    <button type="submit" class="submit-btn">Submit Delivery Order</button>
-    <div class="submit-note">📱 We'll confirm your order by text to the number provided · (310) 748-0040</div>
+    <button type="submit" class="submit-btn">📋 Submit Delivery Order</button>
+    <div class="submit-note">We'll confirm your order by text within 30 minutes · (310) 748-0040</div>
   </form>
 
   <div id="success-msg">
     <div class="check">✅</div>
     <h2>Order Received!</h2>
-    <p>Thank you. Ship2Shore Booking will confirm your delivery order by text or phone within 30 minutes.<br/><br/>Questions? Call or text <strong>(310) 748-0040</strong></p>
+    <p>Thank you! Ship2Shore Booking will confirm your delivery order by text or phone within 30 minutes.<br/><br/>
+    <strong>Next Step — Lock in your appointment time:</strong></p>
+    <a href="https://calendly.com/ship2shore" target="_blank" style="display:block;margin:20px auto 0;max-width:320px;background:var(--gold);color:var(--navy);font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:8px;padding:16px;text-align:center;text-decoration:none;">📅 Book Your Appointment</a>
+    <p style="margin-top:16px;font-size:13px;">Questions? Call or text <strong>(310) 748-0040</strong></p>
   </div>
 </main>
 
@@ -789,77 +400,152 @@
 </footer>
 
 <script>
-  // Multi-vehicle logic
-  let vehicleCount = 1;
+  // ── PAYMENT INFO ──
+  function showPay(method) {
+    ['zelle','cashapp','venmo','apple'].forEach(function(m){
+      var el = document.getElementById('pay-'+m);
+      if(el) el.classList.remove('active');
+    });
+    var active = document.getElementById('pay-'+method);
+    if(active) active.classList.add('active');
 
+    // Update Venmo link with amount based on service selected
+    updatePayLinks();
+  }
+
+  function updatePayLinks() {
+    var svc = document.querySelector('input[name="service_type"]:checked');
+    var amount = 85;
+    if(svc) {
+      if(svc.value.includes('200')) amount = 200;
+      else if(svc.value.includes('325')) amount = 325;
+    }
+    var fname = document.querySelector('input[name="first_name"]').value || '';
+    var lname = document.querySelector('input[name="last_name"]').value || '';
+    var note = encodeURIComponent('Ship2Shore Booking - ' + fname + ' ' + lname);
+    var vlink = document.getElementById('venmo-link');
+    var clink = document.getElementById('cashapp-link');
+    if(vlink) vlink.href = 'https://venmo.com/twicservices?txn=pay&amount='+amount+'&note='+note;
+    if(clink) clink.href = 'https://cash.app/$shawncolbert/'+amount;
+  }
+
+  // Update pay links when service changes
+  document.querySelectorAll('input[name="service_type"]').forEach(function(r){
+    r.addEventListener('change', updatePayLinks);
+  });
+
+  // ── MULTI-VEHICLE ──
+  var vehicleCount = 1;
   function addVehicle() {
     vehicleCount++;
-    const container = document.getElementById('vehicles-container');
-    const block = document.createElement('div');
+    var container = document.getElementById('vehicles-container');
+    var block = document.createElement('div');
     block.className = 'vehicle-block';
     block.id = 'vehicle-' + vehicleCount;
-    block.innerHTML = `
-      <div class="vehicle-header">
-        <span class="vehicle-num">Vehicle ${vehicleCount}</span>
-        <button type="button" class="remove-vehicle-btn" onclick="removeVehicle(${vehicleCount})">✕ Remove</button>
-      </div>
-      <div class="two-col">
-        <div class="field">
-          <label>Year</label>
-          <input type="text" name="vehicle_${vehicleCount}_year" placeholder="e.g. 2022" />
-        </div>
-        <div class="field">
-          <label>Make</label>
-          <input type="text" name="vehicle_${vehicleCount}_make" placeholder="e.g. Toyota" />
-        </div>
-      </div>
-      <div class="two-col">
-        <div class="field">
-          <label>Model</label>
-          <input type="text" name="vehicle_${vehicleCount}_model" placeholder="e.g. Tacoma" />
-        </div>
-        <div class="field">
-          <label>Color</label>
-          <input type="text" name="vehicle_${vehicleCount}_color" placeholder="e.g. White" />
-        </div>
-      </div>
-      <div class="two-col">
-        <div class="field">
-          <label>License Plate</label>
-          <input type="text" name="vehicle_${vehicleCount}_plate" placeholder="e.g. 7ABC123" />
-        </div>
-        <div class="field">
-          <label>State</label>
-          <input type="text" name="vehicle_${vehicleCount}_state" placeholder="e.g. CA" />
-        </div>
-      </div>
-      <div class="field">
-        <label>VIN (optional)</label>
-        <input type="text" name="vehicle_${vehicleCount}_vin" placeholder="Vehicle Identification Number" />
-      </div>
-    `;
+    block.innerHTML =
+      '<div class="vehicle-header">' +
+        '<span class="vehicle-num">Vehicle ' + vehicleCount + '</span>' +
+        '<button type="button" class="remove-vehicle-btn" onclick="removeVehicle('+vehicleCount+')">✕ Remove</button>' +
+      '</div>' +
+      '<div class="two-col">' +
+        '<div class="field"><label>Year</label><input type="text" name="vehicle_'+vehicleCount+'_year" placeholder="e.g. 2022" /></div>' +
+        '<div class="field"><label>Make</label><input type="text" name="vehicle_'+vehicleCount+'_make" placeholder="e.g. Toyota" /></div>' +
+      '</div>' +
+      '<div class="two-col">' +
+        '<div class="field"><label>Model</label><input type="text" name="vehicle_'+vehicleCount+'_model" placeholder="e.g. Tacoma" /></div>' +
+        '<div class="field"><label>Color</label><input type="text" name="vehicle_'+vehicleCount+'_color" placeholder="e.g. White" /></div>' +
+      '</div>' +
+      '<div class="two-col">' +
+        '<div class="field"><label>License Plate</label><input type="text" name="vehicle_'+vehicleCount+'_plate" placeholder="e.g. 7ABC123" /></div>' +
+        '<div class="field"><label>State</label><input type="text" name="vehicle_'+vehicleCount+'_state" placeholder="e.g. CA" /></div>' +
+      '</div>' +
+      '<div class="field"><label>VIN (optional)</label><input type="text" name="vehicle_'+vehicleCount+'_vin" placeholder="Vehicle Identification Number" /></div>';
     container.appendChild(block);
   }
-
   function removeVehicle(num) {
-    const block = document.getElementById('vehicle-' + num);
-    if (block) block.remove();
+    var block = document.getElementById('vehicle-' + num);
+    if(block) block.remove();
   }
 
-  // Handle Netlify form success
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('success') === 'true') {
-    document.getElementById('deliveryForm').style.display = 'none';
-    document.getElementById('success-msg').style.display = 'block';
+  // ── CALENDAR ──
+  var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var DAYS = ['Su','Mo','Tu','We','Th','Fr','Sa'];
+  var calYear, calMonth;
+
+  function initCal() {
+    var now = new Date();
+    calYear = now.getFullYear();
+    calMonth = now.getMonth();
   }
 
-  // Date minimum = today
-  const dateInput = document.querySelector('input[type="date"]');
-  if (dateInput) {
-    const today = new Date().toISOString().split('T')[0];
-    dateInput.setAttribute('min', today);
+  function fmtDate(dt) {
+    var m = String(dt.getMonth()+1).padStart(2,'0');
+    var d = String(dt.getDate()).padStart(2,'0');
+    return m+'/'+d+'/'+dt.getFullYear();
   }
+
+  function renderCal() {
+    var drop = document.getElementById('cal-dropdown');
+    var today = new Date(); today.setHours(0,0,0,0);
+    var first = new Date(calYear, calMonth, 1).getDay();
+    var days = new Date(calYear, calMonth+1, 0).getDate();
+    var sel = document.getElementById('pickup_date').value;
+    var html = '<div class="cal-header">' +
+      '<button type="button" class="cal-nav" onclick="shiftMonth(-1)">&#8249;</button>' +
+      '<span class="cal-month-year">'+MONTHS[calMonth]+' '+calYear+'</span>' +
+      '<button type="button" class="cal-nav" onclick="shiftMonth(1)">&#8250;</button>' +
+      '</div><div class="cal-grid">';
+    DAYS.forEach(function(d){ html += '<div class="cal-day-name">'+d+'</div>'; });
+    for(var i=0;i<first;i++) html += '<div class="cal-day empty"></div>';
+    for(var d=1;d<=days;d++) {
+      var dt = new Date(calYear, calMonth, d);
+      var isPast = dt < today;
+      var isToday = dt.getTime()===today.getTime();
+      var isSel = sel === fmtDate(dt);
+      var cls = 'cal-day';
+      if(isPast) cls += ' past';
+      if(isToday) cls += ' today';
+      if(isSel) cls += ' selected';
+      var click = isPast ? '' : 'onclick="pickDate('+calYear+','+calMonth+','+d+')"';
+      html += '<div class="'+cls+'" '+click+'>'+d+'</div>';
+    }
+    html += '</div>';
+    drop.innerHTML = html;
+  }
+
+  function shiftMonth(dir) {
+    calMonth += dir;
+    if(calMonth > 11){ calMonth=0; calYear++; }
+    if(calMonth < 0){ calMonth=11; calYear--; }
+    renderCal();
+  }
+
+  function pickDate(y,m,d) {
+    var dt = new Date(y,m,d);
+    document.getElementById('pickup_date').value = fmtDate(dt);
+    document.getElementById('cal-dropdown').classList.remove('open');
+  }
+
+  // ── SUCCESS ──
+  var params = new URLSearchParams(window.location.search);
+  if(params.get('success')==='true') {
+    document.getElementById('deliveryForm').style.display='none';
+    document.getElementById('success-msg').style.display='block';
+  }
+
+  // ── INIT ──
+  document.addEventListener('DOMContentLoaded', function() {
+    initCal();
+    var inp = document.getElementById('pickup_date');
+    var drop = document.getElementById('cal-dropdown');
+    inp.addEventListener('click', function(e){
+      e.stopPropagation();
+      renderCal();
+      drop.classList.toggle('open');
+    });
+    document.addEventListener('click', function(){ drop.classList.remove('open'); });
+    drop.addEventListener('click', function(e){ e.stopPropagation(); });
+  });
 </script>
-
 </body>
 </html>
