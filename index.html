@@ -136,7 +136,7 @@
   <div class="form-title">New Delivery Order</div>
   <div class="form-subtitle">Fill out all fields below. We'll confirm your order by phone or text within 30 minutes.</div>
 
-  <form name="delivery-order" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="deliveryForm" action="/?success=true">
+  <form name="delivery-order" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="deliveryForm" action="/success.html">
     <input type="hidden" name="form-name" value="delivery-order" />
     <p style="display:none"><input name="bot-field" /></p>
 
@@ -385,14 +385,6 @@
     <div class="submit-note">We'll confirm your order by text within 30 minutes · (310) 748-0040</div>
   </form>
 
-  <div id="success-msg">
-    <div class="check">✅</div>
-    <h2>Order Received!</h2>
-    <p>Thank you! Ship2Shore Booking will confirm your delivery order by text or phone within 30 minutes.<br/><br/>
-    <strong>Next Step — Lock in your appointment time:</strong></p>
-    <a href="https://calendly.com/ship2shore" target="_blank" style="display:block;margin:20px auto 0;max-width:320px;background:var(--gold);color:var(--navy);font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:8px;padding:16px;text-align:center;text-decoration:none;">📅 Book Your Appointment</a>
-    <p style="margin-top:16px;font-size:13px;">Questions? Call or text <strong>(310) 748-0040</strong></p>
-  </div>
 </main>
 
 <footer>
@@ -524,13 +516,6 @@
     var dt = new Date(y,m,d);
     document.getElementById('pickup_date').value = fmtDate(dt);
     document.getElementById('cal-dropdown').classList.remove('open');
-  }
-
-  // ── SUCCESS ──
-  var params = new URLSearchParams(window.location.search);
-  if(params.get('success')==='true') {
-    document.getElementById('deliveryForm').style.display='none';
-    document.getElementById('success-msg').style.display='block';
   }
 
   // ── INIT ──
