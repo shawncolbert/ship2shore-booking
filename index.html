@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ship2Shore Booking – Delivery Order Form</title>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0a1628" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Ship2Shore" />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap');
     :root {
@@ -516,6 +522,13 @@
     var dt = new Date(y,m,d);
     document.getElementById('pickup_date').value = fmtDate(dt);
     document.getElementById('cal-dropdown').classList.remove('open');
+  }
+
+  // ── SERVICE WORKER ──
+  if('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js');
+    });
   }
 
   // ── INIT ──
