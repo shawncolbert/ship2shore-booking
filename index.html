@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Whaley Inc – Delivery Order Form</title>
+  <title>Delivery Order Form</title>
   <link rel="manifest" href="/manifest.json" />
   <meta name="theme-color" content="#0a1628" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="Whaley Inc" />
+  <meta name="apple-mobile-web-app-title" content="Delivery Order" />
   <link rel="apple-touch-icon" href="/icon-192.png" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap');
@@ -133,7 +133,7 @@
 <body>
 
 <header>
-  <div class="logo-line">ShipWhaley Inc</div>
+  <div class="logo-line">TWIC Escort Services</div>
   <div class="tagline">Licensed TWIC Escort · Port of Long Beach · Wilmington · Matson</div>
   <div class="badge">📋 Delivery Order Form</div>
 </header>
@@ -372,13 +372,13 @@
     <div class="section">
       <div class="section-label">✍️ Authorization</div>
       <div class="auth-box">
-        By submitting this form, <strong>I authorize Whaley Inc</strong> to perform the requested delivery/escort service on my behalf. I confirm all vehicle information is accurate. Payment is due at time of service.<br/><br/>
-        <strong>Questions?</strong> Call or text (310) 748-0040 · shawn@whaleyinc.net
+        By submitting this form, <strong>I authorize the service provider</strong> to perform the requested delivery/escort service on my behalf. I confirm all vehicle information is accurate. Payment is due at time of service.<br/><br/>
+        <strong>Questions?</strong> Call or text (310) 748-0040
       </div>
       <div class="field">
         <label class="checkbox-row">
           <input type="checkbox" name="authorization" value="Authorized" required />
-          <span>I agree to the terms above and authorize Whaley Inc to proceed. <span class="req">*</span></span>
+          <span>I agree to the terms above and authorize the service provider to proceed. <span class="req">*</span></span>
         </label>
       </div>
       <div class="field">
@@ -394,7 +394,7 @@
 </main>
 
 <footer>
-  <p>© 2026 <a href="https://whaleyinc.net">Whaley Inc</a> · Licensed TWIC Escort · Long Beach, CA · <a href="tel:3107480040">(310) 748-0040</a></p>
+  <p>© 2026 · Licensed TWIC Escort · Long Beach, CA · <a href="tel:3107480040">(310) 748-0040</a></p>
 </footer>
 
 <script>
@@ -420,7 +420,7 @@
     }
     var fname = document.querySelector('input[name="first_name"]').value || '';
     var lname = document.querySelector('input[name="last_name"]').value || '';
-    var note = encodeURIComponent('Whaley Inc - ' + fname + ' ' + lname);
+    var note = encodeURIComponent('Delivery Order - ' + fname + ' ' + lname);
     var vlink = document.getElementById('venmo-link');
     var clink = document.getElementById('cashapp-link');
     if(vlink) vlink.href = 'https://venmo.com/twicservices?txn=pay&amount='+amount+'&note='+note;
